@@ -5,7 +5,7 @@
 
 | Name | ID | Contribution |
 |------|----|--------------|
-| Mina Hany | noshy2304072 | Database connection, registration and login |
+| Mina Hany | 2304072 | Database connection, registration and login |
 | Yassin Mohamed | 2304064 | To-Do list operations and SQL queries |
 | Abdrahman Mohamed Etman | 2304104 | Front-end design, validation and testing |
 
