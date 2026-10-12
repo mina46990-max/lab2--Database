@@ -1,0 +1,8 @@
+{% macro field(name, label, type, form, errors, required) %}
+<label for="{{ name }}">{{ label }}</label>
+<input id="{{ name }}" name="{{ name }}" type="{{ type }}" maxlength="255"
+  value="{{ '' if type == 'password' else form.get(name, '') }}"
+  data-required="{{ required }}"
+  {% if name == 'confirm_password' %}data-match="password" data-mismatch="Passwords do not match"{% endif %}>
+<div class="err" data-for="{{ name }}">{{ errors.get(name, '') }}</div>
+{% endmacro %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% from "_macros.html" import field %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h1>Create account</h1>
+<form method="post" action="{{ url_for('register') }}" data-validate novalidate>
+  {{ field('name', 'Name', 'text', form, errors, 'Name is required') }}
+  {{ field('email', 'Email', 'email', form, errors, 'Email is required') }}
+  {{ field('password', 'Password', 'password', form, errors, 'Password is required') }}
+  {{ field('confirm_password', 'Confirm password', 'password', form, errors, 'Confirm password is required') }}
+  <button class="btn block">Register</button>
+</form>
+<p class="alt">Already registered? <a href="{{ url_for('login') }}">Log in</a></p>
+{% endblock %}
